@@ -12,4 +12,4 @@ jobs:
       - name: Run linting checks
         uses: docker://cdssnc/tf-lint-github-action
         with:
-          args: --fast
+          args: --error-with-issues
