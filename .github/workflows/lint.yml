@@ -11,4 +11,5 @@ jobs:
       - uses: actions/checkout@v1
       - name: Run linting checks
         uses: docker://cdssnc/tf-lint-github-action
-        args: --fast
+        with:
+          args: --fast
