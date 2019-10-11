@@ -1,10 +1,3 @@
-# Note that at least one environment variables is required, see
-# https://github.com/terraform-providers/terraform-provider-aws/issues/1110
-variable "environment_variables" {
-  description = "A map that defines environment variables for the Lambda function."
-  type        = "map"
-}
-
 variable "name" {
   description = "The name of the Lambda function."
 }
