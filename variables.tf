@@ -25,7 +25,7 @@ variable "log_retention" {
 
 variable "environment" {
   description = "Environment variables for the Lambda function."
-  default = null
+  default     = null
   type = object({
     variables = map(string)
   })
@@ -38,7 +38,7 @@ variable "timeout" {
 
 variable "vpc_config" {
   description = "Provide this to allow your function to access your VPC."
-  default = null
+  default     = null
   type = object({
     security_group_ids = list(string)
     subnet_ids         = list(string)
