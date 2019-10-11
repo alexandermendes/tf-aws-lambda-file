@@ -11,5 +11,5 @@ jobs:
       - uses: actions/checkout@v1
       - name: Run linting checks
         run: |
-          $ curl -L "$(curl -s https://api.github.com/repos/wata727/tflint/releases/latest | grep -o -E "https://.+?_linux_amd64.zip")" > tflint.zip && unzip tflint.zip && rm tflint.zip
+          curl -L "$(curl -s https://api.github.com/repos/wata727/tflint/releases/latest | grep -o -E "https://.+?_linux_amd64.zip")" > tflint.zip && unzip tflint.zip && rm tflint.zip
           tflint
