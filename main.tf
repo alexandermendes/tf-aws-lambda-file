@@ -3,7 +3,7 @@ resource "aws_cloudwatch_log_group" "logs" {
   retention_in_days = var.log_retention
 }
 
-data "aws_iam_policy_document" "lambda_write_logs_policy_document" {
+data "aws_iam_policy_document" "write_logs_policy_document" {
   statement {
     actions = [
       "logs:CreateLogGroup",
@@ -28,15 +28,15 @@ data "aws_iam_policy_document" "assume_role_policy" {
   }
 }
 
-resource "aws_iam_role" "lambda" {
-  name               = var.name
-  assume_role_policy = data.aws_iam_policy_document.assume_role_policy.json
+resource "aws_iam_role_policy" "write_logs_policy" {
+  name   = "${var.name}-write-logs-policy"
+  role   = aws_iam_role.role.id
+  policy = data.aws_iam_policy_document.write_logs_policy_document.json
 }
 
-resource "aws_iam_role_policy" "lambda_write_logs_policy" {
-  name   = "${var.name}-write-logs-policy"
-  role   = aws_iam_role.lambda_role.id
-  policy = data.aws_iam_policy_document.lambda_write_logs_policy_document.json
+resource "aws_iam_role" "role" {
+  name               = var.name
+  assume_role_policy = data.aws_iam_policy_document.assume_role_policy.json
 }
 
 data "archive_file" "zip" {
@@ -47,7 +47,7 @@ data "archive_file" "zip" {
 
 resource "aws_lambda_function" "main" {
   function_name    = var.name
-  role             = aws_iam_role.lambda_role.arn
+  role             = aws_iam_role.role.arn
   handler          = "${var.name}.${var.handler}"
   runtime          = var.runtime
   filename         = data.archive_file.zip.output_path
