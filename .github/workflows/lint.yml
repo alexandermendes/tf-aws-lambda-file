@@ -3,16 +3,12 @@ name: Lint
 on: [push]
 
 jobs:
-  build:
+  lint:
 
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
       - name: Run linting checks
-        run: |
-          curl -L "$(curl -s https://api.github.com/repos/wata727/tflint/releases/latest | grep -o -E "https://.+?_linux_amd64.zip")" > tflint.zip && unzip tflint.zip && rm tflint.zip
-          mkdir -p /usr/local/tflint/bin
-          export PATH=/usr/local/tflint/bin:$PATH
-          install tflint /usr/local/tflint/bin
-          tflint -v
+        uses: docker://cdssnc/tf-lint-github-action
+        args: --fast
