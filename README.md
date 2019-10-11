@@ -9,9 +9,10 @@ of the repository.
 
 ```terraform
 module "lambda" {
-  source  = "git@github.com:alexandermendes/tf-zipped-lambda.git"
+  source  = "git::https://github.com/alexandermendes/tf-zipped-lambda.git?ref=master"
   name    = "my-function"
   dir     = "functions"
+  ext     = "py"
   runtime = "python3.7"
   handler = "lambda_handler"
 }
