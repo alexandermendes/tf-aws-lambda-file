@@ -21,4 +21,4 @@ jobs:
       - name: Release
         run: sudo standard-version
       - name: Push changes
-        run: git push "https://${GITHUB_ACTOR}:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git" HEAD:master
+        run: sudo git push "https://${GITHUB_ACTOR}:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git" HEAD:master
