@@ -9,7 +9,7 @@ of the repository.
 
 ```terraform
 module "lambda" {
-  source  = "git::https://github.com/alexandermendes/tf-aws-lambda-file.git?ref=master"
+  source  = "git::https://github.com/alexandermendes/tf-aws-lambda-file.git?ref=tags/1.2.0"
   name    = "my-function"
   dir     = "functions"
   ext     = "py"
