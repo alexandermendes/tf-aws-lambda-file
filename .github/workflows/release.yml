@@ -14,6 +14,7 @@ jobs:
       - name: Install
         run: sudo npm i -g standard-version
       - name: Release
-        run: standard-version
-      - name: Push changes
-        run: git push "https://${GITHUB_ACTOR}:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git"
+        run: |
+          git config --global user.name "Release Bot"
+          standard-version
+          git push "https://${GITHUB_ACTOR}:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git"
