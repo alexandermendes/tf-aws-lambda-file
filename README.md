@@ -1,4 +1,4 @@
-# Terraform Zipped Lambda Module
+# Terraform AWS Zipped Lambda File Module
 
 A Terraform module to create AWS Lambda resources from file.
 
@@ -9,7 +9,7 @@ of the repository.
 
 ```terraform
 module "lambda" {
-  source  = "git::https://github.com/alexandermendes/tf-zipped-lambda.git?ref=master"
+  source  = "git::https://github.com/alexandermendes/tf-aws-lambda-file.git?ref=master"
   name    = "my-function"
   dir     = "functions"
   ext     = "py"
