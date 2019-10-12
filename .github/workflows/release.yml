@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Install
-        run: npm i -g standard-version
+        run: sudo npm i -g standard-version
       - name: Release
         run: standard-version
       - name: Push changes
