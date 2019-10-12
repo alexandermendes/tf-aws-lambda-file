@@ -27,3 +27,8 @@ output "role_id" {
   value       = aws_iam_role.role.id
   description = "The ID of the role used for the Lambda function."
 }
+
+output "name" {
+  value       = var.name
+  description = "The name of the Lambda function."
+}
