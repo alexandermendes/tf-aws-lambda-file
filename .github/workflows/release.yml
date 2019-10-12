@@ -15,3 +15,7 @@ jobs:
         run: npm i -g standard-version
       - name: Release
         run: standard-version
+      - name: Push changes
+        run: git push "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
