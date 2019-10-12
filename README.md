@@ -17,3 +17,6 @@ module "lambda" {
   handler = "lambda_handler"
 }
 ```
+
+For additional variables and outputs see [variables.tf](./variables.tf) and
+[outputs.tf](./outputs.tf), respectively.
