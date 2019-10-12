@@ -16,8 +16,8 @@ jobs:
         run: sudo npm i -g standard-version
       - name: Configure GitHub
         run: |
-          git config --global user.name "Alex Mendes"
-          git config --global user.email "alexanderhmendes@gmail.com"
+          sudo git config --global user.name "Alex Mendes"
+          sudo git config --global user.email "alexanderhmendes@gmail.com"
       - name: Release
         run: sudo standard-version
       - name: Push changes
