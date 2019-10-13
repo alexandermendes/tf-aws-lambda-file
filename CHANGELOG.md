@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.2](https://github.com/alexandermendes/tf-zipped-lambda/compare/v1.4.1...v1.4.2) (2019-10-13)
+
+
+### Bug Fixes
+
+* local.namespace > var.namespace ([8f57eba](https://github.com/alexandermendes/tf-zipped-lambda/commit/8f57ebafb4a4dd7576d6481b631ca9ebd132d524))
+
 ### [1.4.1](https://github.com/alexandermendes/tf-zipped-lambda/compare/v1.4.0...v1.4.1) (2019-10-13)
 
 
