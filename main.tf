@@ -54,6 +54,7 @@ resource "aws_lambda_function" "main" {
   source_code_hash = data.archive_file.zip.output_base64sha256
   timeout          = var.timeout
   memory_size      = var.memory_size
+  layers           = var.layers
 
   dynamic "vpc_config" {
     for_each = var.vpc_config == null ? [] : [var.vpc_config]

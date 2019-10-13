@@ -49,3 +49,9 @@ variable "memory_size" {
   description = "Amount of memory in MB your Lambda Function can use at runtime."
   default     = 128
 }
+
+variable "layers" {
+  description = "List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda function."
+  default     = []
+  type        = list(string)
+}
