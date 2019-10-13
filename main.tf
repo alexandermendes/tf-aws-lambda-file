@@ -1,3 +1,7 @@
+locals {
+  name = replace(join("-", var.namespace, var.function_name), "/^-/", "")
+}
+
 resource "aws_cloudwatch_log_group" "logs" {
   name              = "/aws/lambda/${var.name}"
   retention_in_days = var.log_retention
@@ -29,7 +33,7 @@ data "aws_iam_policy_document" "assume_role_policy" {
 }
 
 resource "aws_iam_role_policy" "write_logs_policy" {
-  name   = "${var.name}-write-logs-policy"
+  name   = "${var.name}-write-logs"
   role   = aws_iam_role.role.id
   policy = data.aws_iam_policy_document.write_logs_policy_document.json
 }
@@ -41,8 +45,8 @@ resource "aws_iam_role" "role" {
 
 data "archive_file" "zip" {
   type        = "zip"
-  source_file = "${var.dir}/${var.name}.${var.ext}"
-  output_path = "${var.dir}/${var.name}.zip"
+  source_file = "${var.dir}/${var.function_name}.${var.ext}"
+  output_path = "${var.dir}/${var.function_name}.zip"
 }
 
 resource "aws_lambda_function" "main" {
