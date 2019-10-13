@@ -1,5 +1,5 @@
 locals {
-  name = replace(join("-", local.namespace, var.function_name), "/^-/", "")
+  name = replace(join("-", var.namespace, var.function_name), "/^-/", "")
 }
 
 resource "aws_cloudwatch_log_group" "logs" {
