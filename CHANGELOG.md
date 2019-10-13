@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/alexandermendes/tf-zipped-lambda/compare/v1.3.0...v1.4.0) (2019-10-13)
+
+
+### Features
+
+* add namespace to resources ([cb49a23](https://github.com/alexandermendes/tf-zipped-lambda/commit/cb49a235ccfaf931cfea89dc94a48d0809f55774))
+
 ## [1.3.0](https://github.com/alexandermendes/tf-zipped-lambda/compare/v1.2.1...v1.3.0) (2019-10-13)
 
 
