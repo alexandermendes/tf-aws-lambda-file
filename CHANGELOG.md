@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/alexandermendes/tf-zipped-lambda/compare/v1.4.0...v1.4.1) (2019-10-13)
+
+
+### Bug Fixes
+
+* use of local variable ([164f6d7](https://github.com/alexandermendes/tf-zipped-lambda/commit/164f6d70623badb5f00f42464a7dc0f625193f8c))
+
 ## [1.4.0](https://github.com/alexandermendes/tf-zipped-lambda/compare/v1.3.0...v1.4.0) (2019-10-13)
 
 
