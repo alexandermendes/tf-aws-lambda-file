@@ -29,6 +29,6 @@ output "role_id" {
 }
 
 output "name" {
-  value       = var.name
+  value       = local.name
   description = "The name of the Lambda function."
 }
