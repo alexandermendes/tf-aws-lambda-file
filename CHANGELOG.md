@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/alexandermendes/tf-zipped-lambda/compare/v1.4.4...v2.0.0) (2019-10-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* the name output has been removed in favour of function_name
+
+### Bug Fixes
+
+* replace name with working function_name output ([8c4f954](https://github.com/alexandermendes/tf-zipped-lambda/commit/8c4f954c191914b5b1361c36fa5b17b5107c0074))
+
 ### [1.4.4](https://github.com/alexandermendes/tf-zipped-lambda/compare/v1.4.3...v1.4.4) (2019-10-13)
 
 
