@@ -28,7 +28,7 @@ output "role_id" {
   description = "The ID of the role used for the Lambda function."
 }
 
-output "name" {
-  value       = local.name
+output "function_name" {
+  value       = aws_lambda_function.main.function_name
   description = "The name of the Lambda function."
 }
