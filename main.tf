@@ -46,7 +46,7 @@ resource "aws_iam_role" "role" {
 data "archive_file" "zip" {
   type        = "zip"
   source_file = "${var.dir}/${var.function_name}.${var.ext}"
-  output_path = "${var.dir}/${var.function_name}.zip"
+  output_path = "${var.dir}/${local.name}.zip"
 }
 
 resource "aws_lambda_function" "main" {
