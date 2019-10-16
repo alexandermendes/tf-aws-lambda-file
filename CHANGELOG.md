@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/alexandermendes/tf-zipped-lambda/compare/v2.0.0...v2.0.1) (2019-10-16)
+
+
+### Bug Fixes
+
+* use function_name for handler ([7555432](https://github.com/alexandermendes/tf-zipped-lambda/commit/7555432914612b6d0e33dfa53150fb93ff4e1363))
+* use local name for zipped function to account for namespace ([d894fbf](https://github.com/alexandermendes/tf-zipped-lambda/commit/d894fbfce84a234ab5a199fd5c332073e00fdef9))
+
 ## [2.0.0](https://github.com/alexandermendes/tf-zipped-lambda/compare/v1.4.4...v2.0.0) (2019-10-14)
 
 

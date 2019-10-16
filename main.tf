@@ -46,13 +46,13 @@ resource "aws_iam_role" "role" {
 data "archive_file" "zip" {
   type        = "zip"
   source_file = "${var.dir}/${var.function_name}.${var.ext}"
-  output_path = "${var.dir}/${var.function_name}.zip"
+  output_path = "${var.dir}/${local.name}.zip"
 }
 
 resource "aws_lambda_function" "main" {
   function_name    = local.name
   role             = aws_iam_role.role.arn
-  handler          = "${local.name}.${var.handler}"
+  handler          = "${var.function_name}.${var.handler}"
   runtime          = var.runtime
   filename         = data.archive_file.zip.output_path
   source_code_hash = data.archive_file.zip.output_base64sha256
